@@ -1,22 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function CardItem(props) {
+const  CardItem=(props)=> {
+  const {stock, initial, path, label, src, text, onAdd} = props
+  const [count, setCount] = useState(initial);
+  
+  const minusCount =()=>{   
+  
+    count > initial &&  setCount(count -1);
+  } 
+
+  const addCount =()=>{
+    count < stock && setCount(count +1);
+  }
+
+
   return (
     <>
       <li className='cards__item'>
-        <Link className='cards__item__link' to={props.path}>
-          <figure className='cards__item__pic-wrap' data-category={props.label}>
+        <div className='cards__item__link' to={path}>
+          <figure className='cards__item__pic-wrap' data-category={label}>
             <img
               className='cards__item__img'
               alt='Travel Image'
-              src={props.src}
+              src={src}
             />
           </figure>
           <div className='cards__item__info'>
-            <h5 className='cards__item__text'>{props.text}</h5>
+            <h5 className='cards__item__text'>{text}</h5>
           </div>
-        </Link>
+          <div className='counter'>
+            <button className='btn_shop' onClick={addCount}>+</button>
+            <div class='count'>{count}</div>
+            <button className='btn_shop' onClick={minusCount}>-</button>
+            </div>
+            <div >
+             <button className='btn_shop--cart' onClick={onAdd}>Add to cart</button>
+            </div>
+        </div>
       </li>
     </>
   );

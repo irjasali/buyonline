@@ -1,0 +1,75 @@
+
+.yellow{
+    font-size: 35px;
+    color:rgb(249, 248, 248);
+    margin-right: 10px;
+    }
+    
+    .purple{
+    font-size: 80px;
+    color: purple
+    }
+    
+    .logo_main {
+        width: 100px;
+        height: 50px;
+        padding: 5px 5px 3px 0px;
+        margin:5px 5px 3px 0px; 
+    }
+    .triangle {
+        font-size: 35px;
+        color: white;
+        margin-right: 5px;
+        margin-left: 50px;
+        color:crimson;
+    }
+    
+    .colorNav {
+          font-size: 18px;
+    }
+
+    .navbar-shopping {
+        color: #fff;
+        justify-self: start;
+        margin-left: 20px;      
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 21px;
+        display: flex;
+        align-items: center;
+        width: 80px;
+        height: 30px;
+       
+
+
+      }
+
+      .navbar-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        max-width: 1500px;
+      }
+
+      .navbar-counter{               
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          padding: 15px 15px;
+          border: 10px 10px;     
+          background: #fff;        
+          color: #000;
+          text-align: center;
+          font: 15px Arial, sans-serif;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+         
+          
+
+        
+        
+      }
