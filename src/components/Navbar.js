@@ -3,8 +3,11 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import CartWidget from "./CartWidget";
+import { useCartItemCounter } from "../context/cart-context";
 
 function Navbar() {
+  const counter = useCartItemCounter();
+
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -31,7 +34,7 @@ function Navbar() {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             ACA HAMM
-            <i class="fab fa-typo3" />
+            <i className="fab fa-typo3" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -72,7 +75,7 @@ function Navbar() {
             </li>
           </ul>
           {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
-          <CartWidget count={0} />
+          <CartWidget count={counter} />
         </div>
       </nav>
     </>
