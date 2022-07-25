@@ -5,10 +5,12 @@ import Home from "./components/pages/Home";
 import Services from "./components/pages/Services";
 import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
-
-import "./App.css";
+import CheckOut from "./components/pages/CheckOut";
 import { CartProvider } from "./context/cart-context";
-// import ItemListContainer from "./components/ItemListContainer";
+import "./App.css";
+
+
+
 // import ItemCount from "./components/ItemCount";
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/check-out" element={<CheckOut />} />
         </Routes>
       </Router>
     </CartProvider>

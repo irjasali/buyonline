@@ -63,6 +63,16 @@ function Navbar() {
                 Products
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="/check-out"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Check Out
+              </Link>
+            </li>   
+
 
             <li>
               <Link
@@ -73,9 +83,22 @@ function Navbar() {
                 Sign Up
               </Link>
             </li>
-          </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
-          <CartWidget count={counter} />
+          
+          </ul>        
+
+
+       <ul>
+          <li className="nav-item">
+              <Link
+                to="/check-out"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+               <CartWidget count={counter} />
+              </Link>
+            </li> 
+         </ul>   
+            {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
         </div>
       </nav>
     </>

@@ -12,25 +12,26 @@ export const useCartContext = () => {
 
 export const useAddToCart = () => {
   const { addToCart } = useCartContext();
-
   return addToCart;
 };
 
 export const useCartItemCounter = () => {
   const { counter } = useCartContext();
-
   return counter;
 };
 
 export const CartProvider = ({ children }) => {
+
   const [counter, setCounter] = useState(0);
   const [products, setProducts] = useState([]);
 
   const addToCart = useCallback(
+  
     (item) => {
       console.log("click", item);
-      setCounter(counter + 1);
+     setCounter(counter + 1);
       setProducts([...products, item]);
+      console.log("longitud"+products.length);
       console.log(counter, products);
     },
     [counter, products]

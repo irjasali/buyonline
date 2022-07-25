@@ -1,10 +1,17 @@
 import React from "react";
+import { useCartContext } from "../context/cart-context";
 
-const ItemListContainer = ({saludo}) => {
+const ItemListContainer = ({greetig}) => {
+const context = useCartContext();
+
   return (
-  <div>
-    {saludo}
-  </div>);
+    <>  
+
+    <h1 className="services"> {greetig} {context.counter}</h1>
+   
+
+    </>
+ );
 };
 
 export default ItemListContainer;
